@@ -43,9 +43,9 @@ including neural scaling laws, optimization, task dependency and modularity. Alt
 
 # Get started
 We aim to make examples minimal and self-contained, so examples are coded in jupyter notebooks.
-* Geometry model: geometry_model.ipynb
-* Resource model: resource_model.ipynb
-* Domino model: Domino_model.ipynb
+* Geometry model: [geometry_model.ipynb](https://github.com/KindXiaoming/physics_of_skill_learning/blob/master/geometry_model.ipynb)
+* Resource model: [resource_model.ipynb](https://github.com/KindXiaoming/physics_of_skill_learning/blob/master/resource_model.ipynb)
+* Domino model: [domino_model.ipynb](https://github.com/KindXiaoming/physics_of_skill_learning/blob/master/domino_model.ipynb)
 
-To reproduce figures in the paper, see the folder `./scripts`. File names start with "Figx_", indicating correspondence to which figure.
+To reproduce figures in the paper, see the folder [`./scripts`](https://github.com/KindXiaoming/physics_of_skill_learning/tree/master/scripts). File names start with "Figx_", indicating correspondence to which figure.
 
