@@ -29,7 +29,7 @@ skills tend to learn sequentially, and notably, some skills start to learn right
 learning. For example, when we train two independent sparse parity tasks (with frequencies $p_1 = 1$
 and $p_2 = 0.1$) on a two-layer MLP using the Adam optimizer, the second task
 starts to progress rapidly only after the first task finishes. Quantitatively, learning task 2 only takes roughly
-two more times (instead of p1/p2 = 10 times that one would reasonably expect since the gradient signals differ by 10 times). In a more complicated setup, compositional
+two more times (instead of $p_1/p_2 = 10$ times that one would reasonably expect since the gradient signals differ by 10 times). In a more complicated setup, compositional
 task dependency can also lead to the Domino effect. It is thus very intriguing to understand the
 mechanisms underneath the Domino effect. Although the Domino effect serves as a good starting point, our ambitious goal is to understand skill
 dynamics in general.
