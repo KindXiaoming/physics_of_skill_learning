@@ -1,6 +1,10 @@
-# Physics of Skill Learning
+# Physics of Skill Learning!
 
 This is the github repo for the paper "physics of skill learning" (TBA). 
+
+Research question: Do skills learn in series or in parallel? It is probably a mixture of both, but how much do they learn in series vs in parallel?
+
+![](https://github.com/user-attachments/assets/2d93381e-7fc4-4d52-9397-6182c1b16eaa)
 
 Language models are demonstrating impressive skills in, e.g., coding and mathematics. Many tasks,
 including language modeling, are complex composite tasks that can be decomposed into many
@@ -11,7 +15,7 @@ gradual improvements, or non-monotonic oscillations. Despite the diverse phenome
 in real-world experiments, our intuitive understanding of them is quite limited. Intuitive understanding, or physics-style understanding, has the potential to bridge between theory (mathematics-like
 understanding) and experiments (engineering-like understanding).
 
-To gain some intuition about skill learning, we take physicists’ approach of abstraction and simplification (see illustration in Figure 1): when trying to understand a cow in the wild, physicists would
+To gain some intuition about skill learning, we take physicists’ approach of abstraction and simplification (see illustration below): when trying to understand a cow in the wild, physicists would
 make assumptions to simplify the subject matter. It is science but also art to determine the appropriate
 level of abstraction and simplification. As Einstein famously put it, “Everything should be made as
 simple as possible, but not simpler.” In the same philosophy, we will propose three models trading
@@ -22,10 +26,10 @@ Each of these models is able to capture some realistic aspects of rich skill dyn
 
 As a motivation, we start by making an observation called the Domino effect, which shows that
 skills tend to learn sequentially, and notably, some skills start to learn right after other skills finish
-learning. For example, when we train two independent sparse parity tasks (with frequencies p1 = 1
-and p2 = 0.1, shown in Figure 2 left) on a two-layer MLP using the Adam optimizer, the second task
-starts to progress rapidly only after the first task finishes. Quantitatively, learning task 2 only takes rouglyly
-two more times (instead of p1/p2 = 10 times that one would reasonably expect since the gradient signals differ by 10 times). In a more complicated setup (shown in Figure 2 right), compositional
+learning. For example, when we train two independent sparse parity tasks (with frequencies $p_1 = 1$
+and $p_2 = 0.1$) on a two-layer MLP using the Adam optimizer, the second task
+starts to progress rapidly only after the first task finishes. Quantitatively, learning task 2 only takes roughly
+two more times (instead of p1/p2 = 10 times that one would reasonably expect since the gradient signals differ by 10 times). In a more complicated setup, compositional
 task dependency can also lead to the Domino effect. It is thus very intriguing to understand the
 mechanisms underneath the Domino effect. Although the Domino effect serves as a good starting point, our ambitious goal is to understand skill
 dynamics in general.
