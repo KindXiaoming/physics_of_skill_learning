@@ -2,9 +2,22 @@
 
 This is the github repo for the paper "physics of skill learning" (TBA). 
 
-Research question: Do skills learn in series or in parallel? It is probably a mixture of both, but how much do they learn in series vs in parallel?
+Research question: Do skills learn in series or in parallel? It is probably a mixture of both, but how much do they learn in series vs in parallel? 
 
 ![](https://github.com/user-attachments/assets/2d93381e-7fc4-4d52-9397-6182c1b16eaa)
+
+
+When skills are independent, it is natural to expect the learning is in parallel. However, we observe the *Domino effect*, which shows that
+skills tend to learn sequentially, and notably, some skills start to learn right after other skills finish
+learning. For example, when we train two independent sparse parity tasks (with frequencies $p_1 = 1$
+and $p_2 = 0.1$) on a two-layer MLP using the Adam optimizer, the second task
+starts to progress rapidly only after the first task finishes. Quantitatively, learning task 2 only takes roughly
+two more times (instead of $p_1/p_2 = 10$ times that one would reasonably expect since the gradient signals differ by 10 times). In a more complicated setup, compositional
+task dependency can also lead to the Domino effect. It is thus very intriguing to understand the
+mechanisms underneath the Domino effect. Although the Domino effect serves as a good starting point, our ambitious goal is to understand skill
+dynamics in general.
+
+<img width="923" alt="Screenshot 2025-01-19 at 18 27 58" src="https://github.com/user-attachments/assets/2f018782-40fb-4339-b282-52be7e94f842" />
 
 Language models are demonstrating impressive skills in, e.g., coding and mathematics. Many tasks,
 including language modeling, are complex composite tasks that can be decomposed into many
@@ -23,18 +36,6 @@ off between reality and simplicity – the Geometry model, the Resource model an
 Each of these models is able to capture some realistic aspects of rich skill dynamics.
 
 <img width="1141" alt="Screenshot 2025-01-19 at 18 23 21" src="https://github.com/user-attachments/assets/198aa13e-2d28-4e47-b5c2-16268ae964aa" />
-
-As a motivation, we start by making an observation called the Domino effect, which shows that
-skills tend to learn sequentially, and notably, some skills start to learn right after other skills finish
-learning. For example, when we train two independent sparse parity tasks (with frequencies $p_1 = 1$
-and $p_2 = 0.1$) on a two-layer MLP using the Adam optimizer, the second task
-starts to progress rapidly only after the first task finishes. Quantitatively, learning task 2 only takes roughly
-two more times (instead of $p_1/p_2 = 10$ times that one would reasonably expect since the gradient signals differ by 10 times). In a more complicated setup, compositional
-task dependency can also lead to the Domino effect. It is thus very intriguing to understand the
-mechanisms underneath the Domino effect. Although the Domino effect serves as a good starting point, our ambitious goal is to understand skill
-dynamics in general.
-
-<img width="923" alt="Screenshot 2025-01-19 at 18 27 58" src="https://github.com/user-attachments/assets/2f018782-40fb-4339-b282-52be7e94f842" />
 
 Good physics-like theories are inspired by experimental observations, and should be able to make predictions testable by new experiments. We stick to this philosophy by applying the toy models to many topics in deep learning,
 including neural scaling laws, optimization, task dependency and modularity. Although these toy models are extremely simple, they are able to characterize key aspects of real-world learning dynamics.
